@@ -1,4 +1,11 @@
 .header-container {
   display: flex;
   width: 100%;
+  flex-direction: column;
+
+  .cta-buttons {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
 }

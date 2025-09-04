@@ -1,5 +1,4 @@
-
-export type Role = "user | admin"
+export type Role = "user" | "admin"
 
 export interface Books {
   id: string
@@ -14,3 +13,4 @@ export interface User {
   role: Role
   borrowedBooks: string[]
 }
+
