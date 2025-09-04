@@ -1,7 +1,7 @@
 
 export type Role = "user | admin"
 
-export interface Book {
+export interface Books {
   id: string
   title: string
   author: string

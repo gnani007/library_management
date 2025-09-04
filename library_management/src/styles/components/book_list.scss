@@ -1,0 +1,41 @@
+.book-list-section {
+  display: flex;
+  flex-direction: column;
+
+  .book-list {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 5px;
+      background-color: #f1f2f2;
+      padding: 10px;
+
+      .book-details {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        .book-title {
+          font-weight: bold;
+          font-size: 14px;
+          padding-bottom: 10px;
+        }
+
+        .author {
+          font-size: 12;
+        }
+      }
+
+      .qty {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

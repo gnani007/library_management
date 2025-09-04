@@ -1,11 +1,16 @@
-import { User, Books } from "../types"
+import type { Books } from "../types"
 
-let books: Books[] = [
-  { id: '1', title: 'React Basics', author: 'John Doe', stock: 2 },
-  { id: '2', title: 'TypeScript Guide', author: 'Jane Smith', stock: 1 },
+const books: Books[] = [
+  { id: '101', title: 'React Typescript', author: 'Alex ', stock: 2 },
+  { id: '103', title: 'React Mastering', author: 'Jonnathan', stock: 1 },
 ]
+// simulate api delay
+const wait = (ms = 200) => new Promise(res => setTimeout(res, ms))
 
-let users: Users = [
-  { id: 'u1', name: 'Alice', role: 'user', borrowedBooks: [] },
-  { id: 'a1', name: 'Admin', role: 'admin', borrowedBooks: [] },
-]
+export const backend = {
+  async getBooks(): Promise<Books[]> {
+    await wait()
+    // return deep copy to avoid mutation from callers
+    return JSON.parse(JSON.stringify(books))
+  },
+}
