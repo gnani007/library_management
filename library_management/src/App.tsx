@@ -13,7 +13,7 @@ function App() {
       <Header />
       {state.user?.role === 'admin' && (
         <div className='admin-breadcrumb'>
-          <Link to="/">Go back</Link>
+          <Link to="/">Go back</Link> <span>|</span>
           <Link to="/admin">Go to Admin Panel</Link>
         </div>
       )}

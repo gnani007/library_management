@@ -51,8 +51,6 @@ const BookList = () => {
     }
   }
 
-  console.log(bookList, "test book list")
-
   return (
     <div className="book-list-section">
       <h4>Books</h4>
@@ -71,7 +69,7 @@ const BookList = () => {
                 <button onClick={() => handleBorrow(book.id)}>Borrow</button>
               )}
               {state.user && state.user.borrowedBooks.includes(book.id) && (
-                <button onClick={() => handleReturn(book.id)}>Return</button>
+                <button onClick={() => handleReturn(book.id)} className='btn-return'>Return</button>
               )}
             </div>
           </div>

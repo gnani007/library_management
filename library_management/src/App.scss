@@ -10,8 +10,23 @@
 
     .admin-breadcrumb {
       display: flex;
-      margin-bottom: 15px;
       gap: 15px;
+      margin-left: auto;
+      position: relative;
+      top: 42px;
+
+      a {
+        color: rgb(178, 10, 10);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        color: gray;
+      }
     }
   }
 }
