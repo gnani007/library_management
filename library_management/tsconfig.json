@@ -18,7 +18,11 @@
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": false,
-    "erasableSyntaxOnly": false
+    "erasableSyntaxOnly": false,
+    "types": [
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": [
     "src"

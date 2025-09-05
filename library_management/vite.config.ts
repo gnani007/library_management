@@ -1,10 +1,13 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    sourcemap: true, // enable source maps
-  }
+  test: {
+    globals: true, // enables describe/it/expect without import
+    environment: 'jsdom', // required for @testing-library/react
+    setupFiles: './setupTests.ts', // 👈 add this
+  },
 })
