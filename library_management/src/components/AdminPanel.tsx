@@ -77,8 +77,8 @@ const AdminPanel = () => {
                 <td>{b.author}</td>
                 <td>{b.stock}</td>
                 <td>
-                  <button onClick={() => handleUpdateStock(b.id, b.stock + 1)}>+1</button>
-                  <button onClick={() => handleUpdateStock(b.id, Math.max(0, b.stock - 1))} style={{ marginLeft: 4 }}>-1</button>
+                  <button onClick={() => handleUpdateStock(b.id, b.stock + 1)} data-testid="plus-button">+1</button>
+                  <button onClick={() => handleUpdateStock(b.id, Math.max(0, b.stock - 1))} style={{ marginLeft: 4 }} data-testid="minus-button">-1</button>
                 </td>
               </tr>
             ))}

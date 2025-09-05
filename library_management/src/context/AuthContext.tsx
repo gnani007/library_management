@@ -17,6 +17,14 @@ const initialState: AuthState = {
   token: null,
 }
 
+type User = {
+  id: string
+  name: string
+  role: string
+  borrowedBooks: string[]
+}
+
+
 function authReducer(state: AuthState, action: Action): AuthState {
   switch (action.type) {
     case 'LOGIN_AS':
